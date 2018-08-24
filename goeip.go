@@ -54,6 +54,12 @@ func Lookup(host string) (*Result, error) {
 	}
 	err = unmarshal(res, data)
 
+	if err == nil {
+		if data.Error > 0 {
+			return data, fmt.Errorf("goeip: %s", data.Detail)
+		}
+	}
+
 	return data, err
 }
 
