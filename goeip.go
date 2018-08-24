@@ -41,7 +41,6 @@ type ASN struct {
 }
 
 //Lookup performs a GET request to the API and returns data about the specified hostname/ipaddr
-//The returned error only occurs for internal library errors, please check to see if *Result.Error is greater than 0 and use *Result.Details if so
 func Lookup(host string) (*Result, error) {
 	escapedHost := url.QueryEscape(host)
 
