@@ -8,8 +8,11 @@ Single file library for [Kealper](https://github.com/Kealper)'s geoip utility wr
 ```go
 package main
 
-import "fmt"
-import "github.com/JoshuaDoes/goeip"
+import (
+	"fmt"
+
+	"github.com/JoshuaDoes/goeip"
+)
 
 func main() {
 	result, err := goeip.Lookup("joshuadoes.com")
